@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+    display: flex;
+    min-width: 600px;
+    margin: 0;
+    background-color: #43A047;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'PT Sans', sans-serif;
+}
+
+#board {
+  position: relative;
+  width: 50vw;
+  height: 50vw;
+  min-width: 300px;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+#pond,
+#background {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+#pond {
+  z-index: 20;
+}
+
+.lilypad,
+.frog {
+  position: relative;
+  width: 20%;
+  height: 20%;
+  overflow: hidden;
+}
+
+.frog.bounceOutUp {
+  -webkit-animation-delay: .6s;
+  -moz-animation-delay: .6s;
+  -ms-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.frog .bg.bounce {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.frog.yellow .bg.bounce {
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -ms-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+.frog.red .bg.bounce {
+  -webkit-animation-delay: .6s;
+  -moz-animation-delay: .6s;
+  -ms-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.lilypad .bg,
+.frog .bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.frog .bg {
+  background-size: 60% 60%;
+}
+
+.lilypad.green .bg {
+  background-image: url("./img/lilypad-green.svg");
+}
+
+.lilypad.red .bg {
+  background-image: url("./img/lilypad-red.svg");
+}
+
+.lilypad.yellow .bg {
+  background-image: url("./img/lilypad-yellow.svg");
+}
+
+.frog.green .bg {
+  background-image: url("./img/frog-green.svg");
+}
+
+.frog.red .bg {
+  background-image: url("./img/frog-red.svg");
+}
+
+.frog.yellow .bg {
+  background-image: url("./img/frog-yellow.svg");
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
